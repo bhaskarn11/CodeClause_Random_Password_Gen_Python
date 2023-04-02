@@ -16,6 +16,10 @@ def pass_gen(pass_len):
             pwd += pwd.join(secrets.choice(char_set))
 
         if any(char in special_chars for char in pwd) and sum(char in char_set for char in pwd) >= 2:
+            """
+                checks whether at least one special chars are present and
+                 also whether chars are repeated not more than 2 times
+            """
             return pwd
 
 
